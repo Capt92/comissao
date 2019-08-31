@@ -1,0 +1,32 @@
+/*12.Crie um algoritmo para pagamento de comissão de
+vendedores de peças, levando em consideração que sua
+comissão será de 5% do total da venda e que você tem
+os seguintes dados:
+1. Identificação do vendedor
+2. Código da peça
+3. Preço unitário da peça
+4. Quantidade vendida*/
+
+#include <stdio.h>
+#include <locale.h>
+
+void main ()
+{
+    int codigo, codigo_peca, qtd_vendida;
+    float preco_peca, comissao;
+    char nome [20];
+
+    setlocale (LC_ALL,"");
+    printf ("ID do Vendedor:");
+    scanf ("%i", &codigo);
+    printf ("Nome do Vendedor:");
+    scanf ("%s", nome);
+    printf ("Codigo da Peça:");
+    scanf ("%i", &codigo_peca);
+    printf ("Quantidade Vendida:");
+    scanf ("%i", &qtd_vendida);
+    printf ("Preço da Peça(R$):");
+    scanf ("%f", &preco_peca);
+    comissao = preco_peca * 0.05;
+    printf ("Comissão ganha com a venda foi de:%.2f", comissao);
+}
